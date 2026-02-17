@@ -1,0 +1,171 @@
+
+* {
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f6f6;
+}
+
+/* HEADER */
+header {
+  background: #c62828;
+  color: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.checkout-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* STEPS */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #ccc;
+}
+
+.step.active {
+  border-color: #c62828;
+  color: #c62828;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+/* STEP VISIBILITY */
+.step-box {
+  display: none;
+}
+
+.active-box {
+  display: block;
+}
+
+/* CART */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 70px;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+.qty {
+  margin-left: auto;
+}
+
+.qty button {
+  background: #c62828;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* ADDRESS */
+.address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.address-grid input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.location-btn {
+  background: #ffeaea;
+  border: 1px solid #c62828;
+  padding: 10px;
+  border-radius: 8px;
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.next-btn, .back-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.next-btn {
+  background: #c62828;
+  color: white;
+}
+
+.back-btn {
+  background: #ddd;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* PAYMENT */
+.payment-option {
+  margin-bottom: 15px;
+}
+
+/* SUCCESS */
+.home-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #c62828;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.checkout-step {
+  display: none;
+}
+
+.checkout-step.active {
+  display: block;
+}
+
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+    

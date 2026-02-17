@@ -1,0 +1,55 @@
+<script>if (localStorage.getItem("role") !== "admin") {
+  alert("Access denied");
+  window.location.href = "login.html";
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Indian Affair</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+  <script src="auth.js" defer></script>
+</head>
+<body onload="checkAdmin()">
+
+<header>
+  <h1>Indian Affair</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+<h2>📦 All Orders</h2>
+<div id="orders"></div>
+
+<script>
+fetch("backend/get_orders.php")
+  .then(res => res.json())
+  .then(data => {
+    let html = "";
+    data.forEach(order => {
+      html += `
+        <div style="border:1px solid #ccc; margin:10px; padding:10px;">
+          <h3>${order.user_name} - ₹${order.total_amount}</h3>
+          <p>${order.address}</p>
+          <ul>
+            ${order.items.map(i => `<li>${i.item_name} × ${i.quantity}</li>`).join("")}
+          </ul>
+        </div>
+      `;
+    });
+    document.getElementById("orders").innerHTML = html;
+  });
+</script>
+
+
+<footer>
+  &copy; 2026 Indian Affair. All Rights Reserved.
+</footer>
+
+</body>
+</html>

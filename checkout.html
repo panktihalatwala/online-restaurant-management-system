@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Indian Affair</title>
+  <link rel="stylesheet" href="checkout.css">
+  <script src="/script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Indian Affair</h1>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/menu.html">Menu</a>
+    <a href="/cart.html">Cart</a>
+  </nav>
+</header>
+
+<section >
+
+ <div class="checkout-container">
+
+  <!-- STEP 1: CART -->
+  <section id="step-cart" class="checkout-step active">
+    <h2>🛒 Review Cart</h2>
+    <div id="cart-items"></div>
+
+    <div class="checkout-footer">
+      <h3>Total: <span id="total">₹0</span></h3>
+      <button onclick="goToAddress()">Continue</button>
+    </div>
+  </section>
+
+  <!-- STEP 2: ADDRESS -->
+<section id="step-address" class="checkout-step">
+  <h2>📍 Delivery Address</h2>
+
+  <div class="address-card">
+    <div class="address-grid">
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="phone" placeholder="Mobile Number">
+    </div>
+
+    <textarea id="address" placeholder="House no, Street, Area, City"></textarea>
+
+    <button onclick="goToPayment()">Continue to Payment</button>
+  </div>
+</section>
+
+
+ <!-- STEP 3: PAYMENT -->
+<section id="step-payment" class="checkout-step">
+  <h2>💳 Payment Method</h2>
+
+  <div class="payment-card">
+
+    <label class="payment-option">
+      <input type="radio" name="payment" value="COD" checked>
+      <div>
+        <strong>Cash on Delivery</strong>
+        <p>Pay when food arrives</p>
+      </div>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment" value="UPI">
+      <div>
+        <strong>UPI</strong>
+        <p>Google Pay, PhonePe, Paytm</p>
+      </div>
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment" value="Card">
+      <div>
+        <strong>Credit / Debit Card</strong>
+        <p>Visa, Mastercard, RuPay</p>
+      </div>
+    </label>
+
+    <select id="bank">
+      <option disabled selected>Select Bank</option>
+      <option>HDFC Bank</option>
+      <option>ICICI Bank</option>
+      <option>SBI</option>
+      <option>Axis Bank</option>
+    </select>
+
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+</section>
+
+
+  <!-- STEP 4: SUCCESS -->
+  <section id="step-success" class="checkout-step">
+    <h2>🎉 Order Confirmed</h2>
+    <p>Your food is being prepared 🍽️</p>
+    <button onclick="goHome()">Back to Home</button>
+  </section>
+
+</div>
+
+
+
+</section>
+
+<footer>
+  © 2026 Indian Affair
+</footer>
+
+<script src="/checkout.js"></script>
+</body>
+</html>

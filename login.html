@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Indian Affair</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/auth.css">
+  <script src="/auth.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Indian Affair</h1>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/menu.html">Menu</a>
+    <a href="/cart.html">Cart</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/catering.html">Catering</a>
+  </nav>
+</header>
+
+<section class="auth-container">
+  <h2>Login</h2>
+
+ <form id="loginForm">
+  <input type="email" id="loginEmail" placeholder="Email" required>
+  <input type="password" id="loginPassword" placeholder="Password" required>
+
+  <select id="loginRole" required>
+    <option value="">Login as</option>
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <button type="submit">Login</button>
+</form>
+
+
+  <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
+</section>
+
+<footer>
+  &copy; 2026 Indian Affair. All Rights Reserved.
+</footer>
+
+</body>
+</html>
